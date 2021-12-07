@@ -43,6 +43,10 @@ android {
         dataBinding true
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -56,8 +60,9 @@ dependencies {
     implementation "androidx.core:core-ktx:$version_core"
 
     // Room and Lifecycle dependencies
-    implementation "androidx.room:room-runtime:$version_room"
-    kapt "androidx.room:room-compiler:$version_room"
+    implementation "androidx.room:room-runtime:2.4.0-rc01"
+    annotationProcessor "androidx.room:room-compiler:2.4.0-rc01"
+    kapt 'androidx.room:room-compiler:2.4.0-rc01'
     implementation "androidx.lifecycle:lifecycle-extensions:$version_lifecycle_extensions"
 
     // Coroutines
